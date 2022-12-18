@@ -1,0 +1,4 @@
+[submodule "src-cpp/gecode-solver/gecode"]
+	path = src-cpp/gecode-solver/gecode
+	url = https://github.com/Gecode/gecode.git
+	branch = release/6.3.0
