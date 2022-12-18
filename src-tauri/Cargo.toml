@@ -22,6 +22,7 @@ link-cplusplus = "1.0"
 
 [profile.release]
 strip = true
+lto = true
 
 [features]
 # by default Tauri runs in production mode
