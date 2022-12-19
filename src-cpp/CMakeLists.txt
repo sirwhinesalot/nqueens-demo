@@ -17,14 +17,14 @@ target_include_directories(backend PUBLIC include gecode-solver)
 target_link_libraries(
     backend 
     PRIVATE
-    gecodesupport 
-    gecodekernel 
-    gecodesearch 
-    gecodeint 
-    gecodeset 
-    gecodefloat 
-    gecodeminimodel 
+    gecodeminimodel
     gecodedriver
+    gecodefloat
+    gecodeset 
+    gecodeint 
+    gecodesearch
+    gecodekernel
+    gecodesupport
 )
 
 install(TARGETS backend DESTINATION .)
