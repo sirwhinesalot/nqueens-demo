@@ -5,13 +5,26 @@ set(CMAKE_CXX_EXTENSIONS Off)
 
 project(backend)
 
-add_subdirectory(gecode-solver)
+add_subdirectory(gecode-solver/gecode)
 
 add_library(
     backend STATIC
     src/backend.cpp
+    gecode-solver/gecode-solver.cpp
 )
-target_include_directories(backend PUBLIC include)
-target_link_libraries(backend PRIVATE gecode-solver)
+
+target_include_directories(backend PUBLIC include gecode-solver)
+target_link_libraries(
+    backend 
+    PRIVATE
+    gecodesupport 
+    gecodekernel 
+    gecodesearch 
+    gecodeint 
+    gecodeset 
+    gecodefloat 
+    gecodeminimodel 
+    gecodedriver
+)
 
 install(TARGETS backend DESTINATION .)

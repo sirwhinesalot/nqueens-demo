@@ -15,8 +15,7 @@ fn main() {
     println!("cargo:rustc-link-lib=static=gecodefloat");
     println!("cargo:rustc-link-lib=static=gecodedriver");
     println!("cargo:rustc-link-lib=static=gecodeminimodel");
-
-    println!("cargo:rustc-link-lib=static=gecode-solver");
+    
     println!("cargo:rustc-link-lib=static=backend");
     
     tauri_build::build()
